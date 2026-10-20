@@ -2,8 +2,8 @@
  "schema": 1,
  "shop": "lakitus_cloud",
  "source": "favorites_all.csv",
- "updatedAt": "2026-10-20T21:24:59Z",
- "count": 28,
+ "updatedAt": "2026-10-20T21:46:06Z",
+ "count": 29,
  "favorites": [
   {
    "username": "amandaberti4",
@@ -24,6 +24,16 @@
    "favoritedAt": "Oct 20, ~4:12 PM CT",
    "favoritedAtIso": "2026-10-20T16:12:00-05:00",
    "message": "Hi mystic_wolves_den! Thanks for favoriting my Arcanine card. If you have any questions, just ask, and if you grab a couple of cards I'm happy to bundle them for a better deal."
+  },
+  {
+   "username": "vincentm8688",
+   "profileLink": "https://www.vinted.com/member/3183202400",
+   "item": "Charmeleon #5 MEW Scarlet & Violet 151",
+   "itemLink": "https://www.vinted.com/items/10417265674-charmeleon-5-mew-scarlet-violet-151",
+   "price": "$2.00",
+   "favoritedAt": "Oct 20, ~4:03 PM CT",
+   "favoritedAtIso": "2026-10-20T16:03:00-05:00",
+   "message": "Hi vincentm8688! Thanks for favoriting my Charmeleon card. If you have any questions, just ask, and if you grab a couple of cards I'm happy to bundle them for a better deal."
   },
   {
    "username": "bigfamilyfinds",
