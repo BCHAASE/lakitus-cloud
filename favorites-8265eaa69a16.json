@@ -2,9 +2,19 @@
  "schema": 1,
  "shop": "lakitus_cloud",
  "source": "favorites_all.csv",
- "updatedAt": "2026-10-20T21:46:06Z",
- "count": 29,
+ "updatedAt": "2026-10-20T23:46:37Z",
+ "count": 30,
  "favorites": [
+  {
+   "username": "ourfavshop",
+   "profileLink": "https://www.vinted.com/member/3172489628",
+   "item": "N's Joltik #49 pokemon Journey Together",
+   "itemLink": "https://www.vinted.com/items/10324180016-ns-joltik-49-pokemon-journey-together",
+   "price": "$1.10",
+   "favoritedAt": "Oct 20, ~6:45 PM CT",
+   "favoritedAtIso": "2026-10-20T18:45:00-05:00",
+   "message": "Hi ourfavshop! Thanks for favoriting my N's Joltik card. If you have any questions, just ask, and if you grab a couple of cards I'm happy to bundle them for a better deal."
+  },
   {
    "username": "amandaberti4",
    "profileLink": "https://www.vinted.com/member/3171859737",
