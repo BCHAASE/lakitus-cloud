@@ -2,9 +2,39 @@
  "schema": 1,
  "shop": "lakitus_cloud",
  "source": "favorites_all.csv",
- "updatedAt": "2026-10-20T16:41:38Z",
- "count": 23,
+ "updatedAt": "2026-10-20T17:44:11Z",
+ "count": 26,
  "favorites": [
+  {
+   "username": "bigfamilyfinds",
+   "profileLink": "https://www.vinted.com/member/3184360429",
+   "item": "Rey [Refractor] #155 Star Wars 2025 Topps Chrome",
+   "itemLink": "https://www.vinted.com/items/10094056082-rey-refractor-155-star-wars-2025-topps-chrome",
+   "price": "$10.00",
+   "favoritedAt": "Oct 20, ~12:40 PM CT",
+   "favoritedAtIso": "2026-10-20T12:40:00-05:00",
+   "message": "Hi bigfamilyfinds! Thanks for favoriting my Rey Refractor card. If you have any questions, just ask, and if you grab a couple of cards I'm happy to bundle them for a better deal."
+  },
+  {
+   "username": "gabbygirl97",
+   "profileLink": "https://www.vinted.com/member/3147429778",
+   "item": "Sawsbuck #12 pokemon chilling reign",
+   "itemLink": "https://www.vinted.com/items/10419011970-sawsbuck-12-pokemon-chilling-reign",
+   "price": "$1.00",
+   "favoritedAt": "Oct 20, ~12:39 PM CT",
+   "favoritedAtIso": "2026-10-20T12:39:00-05:00",
+   "message": "Hi gabbygirl97! Thanks for favoriting my Sawsbuck card. If you have any questions, just ask, and if you grab a couple of cards I'm happy to bundle them for a better deal."
+  },
+  {
+   "username": "gabbygirl97",
+   "profileLink": "https://www.vinted.com/member/3147429778",
+   "item": "Girafarig #65 pokemon vivid voltage",
+   "itemLink": "https://www.vinted.com/items/10418777202-girafarig-65-pokemon-vivid-voltage",
+   "price": "$1.00",
+   "favoritedAt": "Oct 20, ~12:35 PM CT",
+   "favoritedAtIso": "2026-10-20T12:35:00-05:00",
+   "message": "Hi gabbygirl97! Thanks for favoriting my Girafarig card. If you have any questions, just ask, and if you grab a couple of cards I'm happy to bundle them for a better deal."
+  },
   {
    "username": "00sells",
    "profileLink": "https://www.vinted.com/member/272814793",
