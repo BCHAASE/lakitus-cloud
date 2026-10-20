@@ -2,9 +2,19 @@
  "schema": 1,
  "shop": "lakitus_cloud",
  "source": "favorites_all.csv",
- "updatedAt": "2026-10-20T16:15:00Z",
- "count": 22,
+ "updatedAt": "2026-10-20T16:41:38Z",
+ "count": 23,
  "favorites": [
+  {
+   "username": "00sells",
+   "profileLink": "https://www.vinted.com/member/272814793",
+   "item": "Dragon Ball Fusion World : Brightness of Hope sleeved booster",
+   "itemLink": "https://www.vinted.com/items/10452082410-dragon-ball-fusion-world-brightness-of-hope-sleeved-booster",
+   "price": "$20.00",
+   "favoritedAt": "Oct 20, ~11:32 AM CT",
+   "favoritedAtIso": "2026-10-20T11:32:00-05:00",
+   "message": "Hi 00sells! Thanks for favoriting my Dragon Ball Brightness of Hope booster. If you have any questions, just ask, and if you grab a couple of cards I'm happy to bundle them for a better deal."
+  },
   {
    "username": "goose27277",
    "profileLink": "https://www.vinted.com/member/3180799833",
