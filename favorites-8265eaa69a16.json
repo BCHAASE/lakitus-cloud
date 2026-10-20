@@ -2,9 +2,29 @@
  "schema": 1,
  "shop": "lakitus_cloud",
  "source": "favorites_all.csv",
- "updatedAt": "2026-10-20T14:37:48Z",
- "count": 17,
+ "updatedAt": "2026-10-20T15:11:49Z",
+ "count": 19,
  "favorites": [
+  {
+   "username": "gabbygirl97",
+   "profileLink": "https://www.vinted.com/member/3147429778",
+   "item": "Fearow 22 pokemon scarlet & violet 151 mew",
+   "itemLink": "https://www.vinted.com/items/10175897189-fearow-22-pokemon-scarlet-violet-151-mew",
+   "price": "$1.00",
+   "favoritedAt": "Oct 20, ~10:03 AM CT",
+   "favoritedAtIso": "2026-10-20T10:03:00-05:00",
+   "message": "Hi gabbygirl97! Thanks for favoriting my Fearow card. If you have any questions, just ask, and if you grab a couple of cards I'm happy to bundle them for a better deal."
+  },
+  {
+   "username": "hhachlko",
+   "profileLink": "https://www.vinted.com/member/3168214714",
+   "item": "Reshiram #14 Pokemon 30th Celebration",
+   "itemLink": "https://www.vinted.com/items/10221358265-reshiram-14-pokemon-30th-celebration",
+   "price": "$1.00",
+   "favoritedAt": "Oct 20, ~10:03 AM CT",
+   "favoritedAtIso": "2026-10-20T10:03:00-05:00",
+   "message": "Hi hhachlko! Thanks for favoriting my Reshiram card. If you have any questions, just ask, and if you grab a couple of cards I'm happy to bundle them for a better deal."
+  },
   {
    "username": "mrmyers009",
    "profileLink": "https://www.vinted.com/member/3189117800",
