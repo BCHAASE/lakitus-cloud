@@ -2,9 +2,19 @@
  "schema": 1,
  "shop": "lakitus_cloud",
  "source": "favorites_all.csv",
- "updatedAt": "2026-10-20T14:16:45Z",
- "count": 16,
+ "updatedAt": "2026-10-20T14:37:48Z",
+ "count": 17,
  "favorites": [
+  {
+   "username": "mrmyers009",
+   "profileLink": "https://www.vinted.com/member/3189117800",
+   "item": "Carina EB03-004 One Piece Extra Booster Heroines Edition",
+   "itemLink": "https://www.vinted.com/items/10445933090-carina-eb03-004-one-piece-extra-booster-heroines-edition",
+   "price": "$2.00",
+   "favoritedAt": "Oct 20, ~9:26 AM CT",
+   "favoritedAtIso": "2026-10-20T09:26:00-05:00",
+   "message": "Hi mrmyers009! Thanks for favoriting my Carina card. If you have any questions, just ask, and if you grab a couple of cards I'm happy to bundle them for a better deal."
+  },
   {
    "username": "mrmyers009",
    "profileLink": "https://www.vinted.com/member/3189117800",
