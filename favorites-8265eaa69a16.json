@@ -2,9 +2,29 @@
  "schema": 1,
  "shop": "lakitus_cloud",
  "source": "favorites_all.csv",
- "updatedAt": "2026-10-20T13:11:44Z",
- "count": 10,
+ "updatedAt": "2026-10-20T13:43:34Z",
+ "count": 12,
  "favorites": [
+  {
+   "username": "00sells",
+   "profileLink": "https://www.vinted.com/member/272814793",
+   "item": "Baccarat EB03-007 One Piece Extra Booster Heroines Edition",
+   "itemLink": "https://www.vinted.com/items/10447866919-baccarat-eb03-007-one-piece-extra-booster-heroines-edition",
+   "price": "$1.00",
+   "favoritedAt": "Oct 20, ~8:39 AM CT",
+   "favoritedAtIso": "2026-10-20T08:39:00-05:00",
+   "message": "Hi 00sells! Thanks for favoriting my Baccarat card. If you have any questions, just ask, and if you grab a couple of cards I'm happy to bundle them for a better deal."
+  },
+  {
+   "username": "keirstyng",
+   "profileLink": "https://www.vinted.com/member/272268952",
+   "item": "Fblthp, impossibly lost #213 magic reality fracture",
+   "itemLink": "https://www.vinted.com/items/10394667708-fblthp-impossibly-lost-213-magic-reality-fracture",
+   "price": "$1.10",
+   "favoritedAt": "Oct 20, ~8:33 AM CT",
+   "favoritedAtIso": "2026-10-20T08:33:00-05:00",
+   "message": "Hi keirstyng! Thanks for favoriting my Fblthp, Impossibly Lost card. If you have any questions, just ask, and if you grab a couple of cards I'm happy to bundle them for a better deal."
+  },
   {
    "username": "mrmyers009",
    "profileLink": "https://www.vinted.com/member/3189117800",
