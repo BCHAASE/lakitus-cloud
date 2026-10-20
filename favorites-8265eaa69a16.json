@@ -2,9 +2,29 @@
  "schema": 1,
  "shop": "lakitus_cloud",
  "source": "favorites_all.csv",
- "updatedAt": "2026-10-20T15:25:06Z",
- "count": 20,
+ "updatedAt": "2026-10-20T16:15:00Z",
+ "count": 22,
  "favorites": [
+  {
+   "username": "goose27277",
+   "profileLink": "https://www.vinted.com/member/3180799833",
+   "item": "Centiskorch reverse holo #10 pokemon pitch black",
+   "itemLink": "https://www.vinted.com/items/10452277456-centiskorch-reverse-holo-10-pokemon-pitch-black",
+   "price": "$3.00",
+   "favoritedAt": "Oct 20, ~11:06 AM CT",
+   "favoritedAtIso": "2026-10-20T11:06:00-05:00",
+   "message": "Hi goose27277! Thanks for favoriting my Centiskorch card. If you have any questions, just ask, and if you grab a couple of cards I'm happy to bundle them for a better deal."
+  },
+  {
+   "username": "goose27277",
+   "profileLink": "https://www.vinted.com/member/3180799833",
+   "item": "Banette reverse holo #34 pokemon pitch black",
+   "itemLink": "https://www.vinted.com/items/10452167646-banette-reverse-holo-34-pokemon-pitch-black",
+   "price": "$3.00",
+   "favoritedAt": "Oct 20, ~11:06 AM CT",
+   "favoritedAtIso": "2026-10-20T11:06:00-05:00",
+   "message": "Hi goose27277! Thanks for favoriting my Banette card. If you have any questions, just ask, and if you grab a couple of cards I'm happy to bundle them for a better deal."
+  },
   {
    "username": "lalaworldtraveler",
    "profileLink": "https://www.vinted.com/member/3151639862",
