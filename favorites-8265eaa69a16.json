@@ -2,9 +2,29 @@
  "schema": 1,
  "shop": "lakitus_cloud",
  "source": "favorites_all.csv",
- "updatedAt": "2026-10-20T17:44:11Z",
- "count": 26,
+ "updatedAt": "2026-10-20T21:24:59Z",
+ "count": 28,
  "favorites": [
+  {
+   "username": "amandaberti4",
+   "profileLink": "https://www.vinted.com/member/3171859737",
+   "item": "Gol.D.Roger OP13-003 One Piece Carrying on His Will",
+   "itemLink": "https://www.vinted.com/items/10099677916-goldroger-op13-003-one-piece-carrying-on-his-will",
+   "price": "$3.00",
+   "favoritedAt": "Oct 20, ~4:19 PM CT",
+   "favoritedAtIso": "2026-10-20T16:19:00-05:00",
+   "message": "Hi amandaberti4! Thanks for favoriting my Gol.D.Roger card. If you have any questions, just ask, and if you grab a couple of cards I'm happy to bundle them for a better deal."
+  },
+  {
+   "username": "mystic_wolves_den",
+   "profileLink": "https://www.vinted.com/member/3176023112",
+   "item": "Arcanine #59 pokemon japanese scarlet and violet 151 sv2a",
+   "itemLink": "https://www.vinted.com/items/10419407195-arcanine-59-pokemon-japanese-scarlet-and-violet-151-sv2a",
+   "price": "$2.00",
+   "favoritedAt": "Oct 20, ~4:12 PM CT",
+   "favoritedAtIso": "2026-10-20T16:12:00-05:00",
+   "message": "Hi mystic_wolves_den! Thanks for favoriting my Arcanine card. If you have any questions, just ask, and if you grab a couple of cards I'm happy to bundle them for a better deal."
+  },
   {
    "username": "bigfamilyfinds",
    "profileLink": "https://www.vinted.com/member/3184360429",
