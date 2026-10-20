@@ -2,9 +2,19 @@
  "schema": 1,
  "shop": "lakitus_cloud",
  "source": "favorites_all.csv",
- "updatedAt": "2026-10-20T15:11:49Z",
- "count": 19,
+ "updatedAt": "2026-10-20T15:25:06Z",
+ "count": 20,
  "favorites": [
+  {
+   "username": "lalaworldtraveler",
+   "profileLink": "https://www.vinted.com/member/3151639862",
+   "item": "Sawsbuck #12 pokemon chilling reign",
+   "itemLink": "https://www.vinted.com/items/10419011970-sawsbuck-12-pokemon-chilling-reign",
+   "price": "$1.00",
+   "favoritedAt": "Oct 20, ~10:18 AM CT",
+   "favoritedAtIso": "2026-10-20T10:18:00-05:00",
+   "message": "Hi lalaworldtraveler! Thanks for favoriting my Sawsbuck card. If you have any questions, just ask, and if you grab a couple of cards I'm happy to bundle them for a better deal."
+  },
   {
    "username": "gabbygirl97",
    "profileLink": "https://www.vinted.com/member/3147429778",
