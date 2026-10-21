@@ -15,6 +15,7 @@
   '.fh .pr{color:#2dd4bf;font-weight:bold}.fh .ct{color:#999;font-size:13px}'+
   '.fr{border-top:1px solid #233;margin-top:10px;padding-top:10px}.fr .who{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}'+
   '.fr .who a{font-weight:600;overflow-wrap:anywhere}.fr .tm{color:#999;font-size:13px}'+
+  '.fr .who a.un.ok{background:#2dd4bf;color:#0f1214;border-radius:4px}.fr .who a.pf{font-weight:400;font-size:12px;color:#999;text-decoration:underline}'+
   '.fr .its{font-size:13px;color:#bbb;margin:4px 0 0;padding-left:18px}.fr .its li{margin:2px 0}'+
   '.fr .msg{display:flex;gap:8px;align-items:flex-start;margin-top:6px}.fr .msg div{flex:1 1 auto;min-width:0;background:#0f1214;border:1px solid #233;border-radius:6px;padding:8px;font-size:14px;line-height:1.4;overflow-wrap:anywhere}'+
   '.fr .cp{flex:0 0 auto;padding:10px 14px;min-height:40px;background:#1a1f22;border:1px solid #2dd4bf;color:#2dd4bf;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer}'+
@@ -88,9 +89,14 @@
     return order.map(function(k){return map[k]});
   }
   var msgs=[];
+  // @username = same as tapping the Vinted favorite notification: copies the message and opens the want_it chat
+  // (fs[0] = this item's favorite, or in Group by person the person's most recent favorite). Small 'profile' link beside it.
   function row(name,link,time,msg,extra,favsForBtns){
-    msgs.push(msg);var mi=msgs.length-1,fs=favsForBtns||[],multi=fs.length>1;
-    return '<div class="fr"><div class="who"><a href="'+esc(safeUrl(link))+'" target="_blank" rel="noopener">'+esc(name)+'</a><span class="tm">'+esc(time)+'</span></div>'+(extra||'')+
+    msgs.push(msg);var mi=msgs.length-1,fs=favsForBtns||[],multi=fs.length>1,ml=fs.length?msgLink(fs[0]):'';
+    var un=ml?'<a class="un" href="'+esc(ml)+'" target="_blank" rel="noopener" data-m="'+mi+'" title="Copies the message, then opens the Vinted chat for this buyer'+(multi?' (most recent item)':' and item')+'">'+esc(name)+'</a>'
+             :'<a href="'+esc(safeUrl(link))+'" target="_blank" rel="noopener">'+esc(name)+'</a>';
+    var pf=ml&&safeUrl(link)!=='#'?'<a class="pf" href="'+esc(safeUrl(link))+'" target="_blank" rel="noopener" title="Open Vinted profile">profile</a>':'';
+    return '<div class="fr"><div class="who">'+un+pf+'<span class="tm">'+esc(time)+'</span></div>'+(extra||'')+
       '<div class="msg"><div>'+esc(msg)+'</div><div class="acts"><button type="button" class="cp" data-m="'+mi+'">Copy</button>'+
       fs.map(function(f){return mvBtn(f,mi,multi?f.item:'')}).join('')+'</div></div></div>';
   }
@@ -133,7 +139,7 @@
   // Message on Vinted: copy synchronously inside the tap (so it still works once the new tab/app takes focus),
   // then let the <a target=_blank> open the chat natively (no popup blocker; Vinted app via app links on phones).
   fl.addEventListener('click',function(e){
-    var a=e.target.closest('.mv');if(!a)return;
+    var a=e.target.closest('.mv,.un');if(!a)return;
     var t=msgs[+a.getAttribute('data-m')]||'',ok=fallbackCopy(t);
     function done(ok){
       if(ok){toast('Message copied, paste it in the chat');a.classList.add('ok');setTimeout(function(){a.classList.remove('ok')},1500)}
