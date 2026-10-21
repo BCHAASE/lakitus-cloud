@@ -2,9 +2,19 @@
  "schema": 1,
  "shop": "lakitus_cloud",
  "source": "favorites_all.csv",
- "updatedAt": "2026-10-21T00:55:01Z",
- "count": 30,
+ "updatedAt": "2026-10-21T00:56:29Z",
+ "count": 31,
  "favorites": [
+  {
+   "username": "erinl415",
+   "profileLink": "https://www.vinted.com/member/3193956929",
+   "item": "Marill Reverse Holo #58 Pokemon Fusion Strike",
+   "itemLink": "https://www.vinted.com/items/10465491862-marill-reverse-holo-58-pokemon-fusion-strike",
+   "price": "$5.00",
+   "favoritedAt": "Oct 20, ~7:51 PM CT",
+   "favoritedAtIso": "2026-10-20T19:51:00-05:00",
+   "message": "Greetings ! I know trying to search a user's profile for cards is not available on Vinted nor is it easy to create bundles and search for specific cards, if you ever have any specific card(s) you are looking for just send me a message and we will look for you if needed.  Heads up , save money on bundles!"
+  },
   {
    "username": "ourfavshop",
    "profileLink": "https://www.vinted.com/member/3172489628",
