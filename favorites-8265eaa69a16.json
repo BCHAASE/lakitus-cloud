@@ -2,9 +2,22 @@
  "schema": 1,
  "shop": "lakitus_cloud",
  "source": "favorites_all.csv",
- "updatedAt": "2026-10-21T00:58:32Z",
- "count": 31,
+ "updatedAt": "2026-10-21T01:24:00Z",
+ "count": 32,
  "favorites": [
+  {
+   "username": "alejandros414",
+   "profileLink": "https://www.vinted.com/member/3172201652",
+   "item": "Poppy #220 pokemon obsidian flames",
+   "itemLink": "https://www.vinted.com/items/10465511840-poppy-220-pokemon-obsidian-flames",
+   "price": "$5.00",
+   "favoritedAt": "Oct 20, ~8:13 PM CT",
+   "favoritedAtIso": "2026-10-20T20:13:00-05:00",
+   "message": "Greetings ! I know trying to search a user's profile for cards is not available on Vinted nor is it easy to create bundles and search for specific cards, if you ever have any specific card(s) you are looking for just send me a message and we will look for you if needed.  Heads up , save money on bundles!",
+   "member_id": "3172201652",
+   "item_id": "10465511840",
+   "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3172201652&item_id=10465511840"
+  },
   {
    "username": "erinl415",
    "profileLink": "https://www.vinted.com/member/3193956929",
