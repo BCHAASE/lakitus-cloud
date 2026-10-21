@@ -2,8 +2,8 @@
  "schema": 1,
  "shop": "lakitus_cloud",
  "source": "favorites_all.csv",
- "updatedAt": "2026-10-21T17:05:19Z",
- "count": 66,
+ "updatedAt": "2026-10-21T17:30:55Z",
+ "count": 68,
  "messaged_member_ids": [
   "208458413",
   "272814793",
@@ -29,6 +29,34 @@
   "3201802698"
  ],
  "favorites": [
+  {
+   "username": "gabbygirl97",
+   "profileLink": "https://www.vinted.com/member/3147429778",
+   "item": "Clefable [Stars] #103 Pokemon Chinese Gem Pack 3",
+   "itemLink": "https://www.vinted.com/items/10474773020-clefable-stars-103-pokemon-chinese-gem-pack-3",
+   "price": "$3.00",
+   "favoritedAt": "Oct 21, ~12:21 PM CT",
+   "favoritedAtIso": "2026-10-21T12:21:00-05:00",
+   "message": "Greetings ! I know trying to search a user's profile for cards is not available on Vinted nor is it easy to create bundles and search for specific cards, if you ever have any specific card(s) you are looking for just send me a message and we will look for you if needed.  Heads up , save money on bundles!",
+   "member_id": "3147429778",
+   "item_id": "10474773020",
+   "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3147429778&item_id=10474773020",
+   "messaged": true
+  },
+  {
+   "username": "kristenk35",
+   "profileLink": "https://www.vinted.com/member/3200598907",
+   "item": "Cresselia #74 Pokemon 30th Celebration",
+   "itemLink": "https://www.vinted.com/items/10473496932-cresselia-74-pokemon-30th-celebration",
+   "price": "$1.00",
+   "favoritedAt": "Oct 21, ~12:21 PM CT",
+   "favoritedAtIso": "2026-10-21T12:21:00-05:00",
+   "message": "Greetings ! I know trying to search a user's profile for cards is not available on Vinted nor is it easy to create bundles and search for specific cards, if you ever have any specific card(s) you are looking for just send me a message and we will look for you if needed.  Heads up , save money on bundles!",
+   "member_id": "3200598907",
+   "item_id": "10473496932",
+   "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3200598907&item_id=10473496932",
+   "messaged": false
+  },
   {
    "username": "brandonm011790",
    "profileLink": "https://www.vinted.com/member/3195797910",
