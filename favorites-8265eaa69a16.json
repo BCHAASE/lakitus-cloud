@@ -2,8 +2,8 @@
  "schema": 1,
  "shop": "lakitus_cloud",
  "source": "favorites_all.csv",
- "updatedAt": "2026-10-21T13:03:43Z",
- "count": 37,
+ "updatedAt": "2026-10-21T13:13:56Z",
+ "count": 38,
  "messaged_member_ids": [
   "3151639862",
   "3158693075",
@@ -19,6 +19,20 @@
   "3201802698"
  ],
  "favorites": [
+  {
+   "username": "vader3113",
+   "profileLink": "https://www.vinted.com/member/3198097960",
+   "item": "xatu #72 pokemon paradox rift",
+   "itemLink": "https://www.vinted.com/items/10447529629-xatu-72-pokemon-paradox-rift",
+   "price": "$2.00",
+   "favoritedAt": "Oct 21, ~8:09 AM CT",
+   "favoritedAtIso": "2026-10-21T08:09:00-05:00",
+   "message": "Greetings ! I know trying to search a user's profile for cards is not available on Vinted nor is it easy to create bundles and search for specific cards, if you ever have any specific card(s) you are looking for just send me a message and we will look for you if needed.  Heads up , save money on bundles!",
+   "member_id": "3198097960",
+   "item_id": "10447529629",
+   "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3198097960&item_id=10447529629",
+   "messaged": true
+  },
   {
    "username": "brooklynvintage11211",
    "profileLink": "https://www.vinted.com/member/3182241860",
