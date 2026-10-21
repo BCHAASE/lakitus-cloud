@@ -2,8 +2,8 @@
  "schema": 1,
  "shop": "lakitus_cloud",
  "source": "favorites_all.csv",
- "updatedAt": "2026-10-21T16:06:18Z",
- "count": 52,
+ "updatedAt": "2026-10-21T16:15:50Z",
+ "count": 53,
  "messaged_member_ids": [
   "272814793",
   "3147429778",
@@ -26,6 +26,20 @@
   "3201802698"
  ],
  "favorites": [
+  {
+   "username": "static_jose",
+   "profileLink": "https://www.vinted.com/member/3195710460",
+   "item": "Wigglytuff #91 pokemon japanese inferno x",
+   "itemLink": "https://www.vinted.com/items/10465479022-wigglytuff-91-pokemon-japanese-inferno-x",
+   "price": "$25.00",
+   "favoritedAt": "Oct 21, ~11:11 AM CT",
+   "favoritedAtIso": "2026-10-21T11:11:00-05:00",
+   "message": "Greetings ! I know trying to search a user's profile for cards is not available on Vinted nor is it easy to create bundles and search for specific cards, if you ever have any specific card(s) you are looking for just send me a message and we will look for you if needed.  Heads up , save money on bundles!",
+   "member_id": "3195710460",
+   "item_id": "10465479022",
+   "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3195710460&item_id=10465479022",
+   "messaged": false
+  },
   {
    "username": "ebar_the3rd",
    "profileLink": "https://www.vinted.com/member/3163125249",
