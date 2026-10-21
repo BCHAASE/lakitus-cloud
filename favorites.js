@@ -56,16 +56,9 @@
     return f.favoritedAt||'';
   }
   function ts(f){var t=f.favoritedAtIso?Date.parse(f.favoritedAtIso):NaN;return isNaN(t)?-Infinity:t}
-  function shortName(f){
-    var m=/favoriting my (.+?) cards?\./.exec(f.message||'');if(m)return m[1];
-    var t=(f.item||'').split(/\s*[\[(#]|\s+\d/)[0].trim();return t||f.item||'item';
-  }
-  function joinNames(a){return a.length<2?(a[0]||''):a.slice(0,-1).join(', ')+' and '+a[a.length-1]}
-  function personMsg(u,list){
-    if(list.length===1&&list[0].message)return list[0].message;
-    var names=[],seen={};list.forEach(function(f){var n=shortName(f);if(!seen[n]){seen[n]=1;names.push(n)}});
-    return 'Hi '+u+'! Thanks for favoriting my '+joinNames(names)+' card'+(names.length>1?'s':'')+'. If you have any questions, just ask, and I\'m happy to bundle them for a better deal.';
-  }
+  // Fixed favoriter message: identical for everyone (no username/card name), shown once per person.
+  var FIXED_MSG="Greetings ! I know trying to search a user's profile for cards is not available on Vinted nor is it easy to create bundles and search for specific cards, if you ever have any specific card(s) you are looking for just send me a message and we will look for you if needed.  Heads up , save money on bundles!";
+  function personMsg(){return FIXED_MSG}
   function groupBy(keyFn){
     var order=[],map={};
     data.forEach(function(f){var k=keyFn(f);if(!map[k]){map[k]=[];order.push(k)}map[k].push(f)});
@@ -89,7 +82,7 @@
         if(!rows.length)return;ng++;nf+=rows.length;
         var users={};g.forEach(function(f){users[f.username]=1});var n=Object.keys(users).length;
         h+='<div class="fg"><div class="fh"><a href="'+esc(safeUrl(it.itemLink))+'" target="_blank" rel="noopener">'+esc(it.item)+'</a><span class="pr">'+esc(it.price)+'</span><span class="ct">\u2605 '+n+' favoriter'+(n===1?'':'s')+'</span></div>'+
-          rows.map(function(f){return row(f.username,f.profileLink,when(f),f.message||'')}).join('')+'</div>';
+          rows.map(function(f){return row(f.username,f.profileLink,when(f),f.message||FIXED_MSG)}).join('')+'</div>';
       });
     }else{
       groupBy(function(f){return f.username}).forEach(function(g){
