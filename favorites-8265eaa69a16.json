@@ -2,9 +2,22 @@
  "schema": 1,
  "shop": "lakitus_cloud",
  "source": "favorites_all.csv",
- "updatedAt": "2026-10-21T02:46:15Z",
- "count": 35,
+ "updatedAt": "2026-10-21T02:56:05Z",
+ "count": 36,
  "favorites": [
+  {
+   "username": "jerichom2",
+   "profileLink": "https://www.vinted.com/member/3201802698",
+   "item": "Nami OP16-091 One Piece The Time of Battle",
+   "itemLink": "https://www.vinted.com/items/10296148150-nami-op16-091-one-piece-the-time-of-battle",
+   "price": "$5.00",
+   "favoritedAt": "Oct 20, ~9:45 PM CT",
+   "favoritedAtIso": "2026-10-20T21:45:00-05:00",
+   "message": "Greetings ! I know trying to search a user's profile for cards is not available on Vinted nor is it easy to create bundles and search for specific cards, if you ever have any specific card(s) you are looking for just send me a message and we will look for you if needed.  Heads up , save money on bundles!",
+   "member_id": "3201802698",
+   "item_id": "10296148150",
+   "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3201802698&item_id=10296148150"
+  },
   {
    "username": "angelan240",
    "profileLink": "https://www.vinted.com/member/3185429777",
