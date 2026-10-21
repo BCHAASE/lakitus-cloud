@@ -1,0 +1,6 @@
+# Private: Vinted favoriters personal data - never publish
+favorites-*.json
+favorites*.json
+favorites_*.csv
+messaged.json
+private/
