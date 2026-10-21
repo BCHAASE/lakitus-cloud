@@ -2,10 +2,37 @@
  "schema": 1,
  "shop": "lakitus_cloud",
  "source": "favorites_all.csv",
- "updatedAt": "2026-10-21T11:45:19Z",
- "count": 36,
- "messaged_member_ids": [],
+ "updatedAt": "2026-10-21T13:03:43Z",
+ "count": 37,
+ "messaged_member_ids": [
+  "3151639862",
+  "3158693075",
+  "3171859737",
+  "3172201652",
+  "3176023112",
+  "3180799833",
+  "3183202400",
+  "3185429777",
+  "3193956929",
+  "3196182804",
+  "3198097960",
+  "3201802698"
+ ],
  "favorites": [
+  {
+   "username": "brooklynvintage11211",
+   "profileLink": "https://www.vinted.com/member/3182241860",
+   "item": "castform snowy form #34 pokemon chilling reign",
+   "itemLink": "https://www.vinted.com/items/10447572045-castform-snowy-form-34-pokemon-chilling-reign",
+   "price": "$1.00",
+   "favoritedAt": "Oct 21, ~7:05 AM CT",
+   "favoritedAtIso": "2026-10-21T07:05:00-05:00",
+   "message": "Greetings ! I know trying to search a user's profile for cards is not available on Vinted nor is it easy to create bundles and search for specific cards, if you ever have any specific card(s) you are looking for just send me a message and we will look for you if needed.  Heads up , save money on bundles!",
+   "member_id": "3182241860",
+   "item_id": "10447572045",
+   "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3182241860&item_id=10447572045",
+   "messaged": false
+  },
   {
    "username": "jerichom2",
    "profileLink": "https://www.vinted.com/member/3201802698",
@@ -18,7 +45,7 @@
    "member_id": "3201802698",
    "item_id": "10296148150",
    "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3201802698&item_id=10296148150",
-   "messaged": false
+   "messaged": true
   },
   {
    "username": "angelan240",
@@ -32,7 +59,7 @@
    "member_id": "3185429777",
    "item_id": "10465959498",
    "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3185429777&item_id=10465959498",
-   "messaged": false
+   "messaged": true
   },
   {
    "username": "angelan240",
@@ -46,7 +73,7 @@
    "member_id": "3185429777",
    "item_id": "10465970674",
    "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3185429777&item_id=10465970674",
-   "messaged": false
+   "messaged": true
   },
   {
    "username": "gabbygirl97",
@@ -74,7 +101,7 @@
    "member_id": "3172201652",
    "item_id": "10465511840",
    "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3172201652&item_id=10465511840",
-   "messaged": false
+   "messaged": true
   },
   {
    "username": "erinl415",
@@ -88,7 +115,7 @@
    "member_id": "3193956929",
    "item_id": "10465491862",
    "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3193956929&item_id=10465491862",
-   "messaged": false
+   "messaged": true
   },
   {
    "username": "ourfavshop",
@@ -116,7 +143,7 @@
    "member_id": "3171859737",
    "item_id": "10099677916",
    "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3171859737&item_id=10099677916",
-   "messaged": false
+   "messaged": true
   },
   {
    "username": "mystic_wolves_den",
@@ -130,7 +157,7 @@
    "member_id": "3176023112",
    "item_id": "10419407195",
    "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3176023112&item_id=10419407195",
-   "messaged": false
+   "messaged": true
   },
   {
    "username": "vincentm8688",
@@ -144,7 +171,7 @@
    "member_id": "3183202400",
    "item_id": "10417265674",
    "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3183202400&item_id=10417265674",
-   "messaged": false
+   "messaged": true
   },
   {
    "username": "bigfamilyfinds",
@@ -214,7 +241,7 @@
    "member_id": "3180799833",
    "item_id": "10452277456",
    "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3180799833&item_id=10452277456",
-   "messaged": false
+   "messaged": true
   },
   {
    "username": "goose27277",
@@ -228,7 +255,7 @@
    "member_id": "3180799833",
    "item_id": "10452167646",
    "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3180799833&item_id=10452167646",
-   "messaged": false
+   "messaged": true
   },
   {
    "username": "lalaworldtraveler",
@@ -242,7 +269,7 @@
    "member_id": "3151639862",
    "item_id": "10419011970",
    "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3151639862&item_id=10419011970",
-   "messaged": false
+   "messaged": true
   },
   {
    "username": "gabbygirl97",
@@ -410,7 +437,7 @@
    "member_id": "3196182804",
    "item_id": "10038507609",
    "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3196182804&item_id=10038507609",
-   "messaged": false
+   "messaged": true
   },
   {
    "username": "chrsxd24",
@@ -494,7 +521,7 @@
    "member_id": "3198097960",
    "item_id": "10447502814",
    "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3198097960&item_id=10447502814",
-   "messaged": false
+   "messaged": true
   },
   {
    "username": "milanh260",
@@ -508,7 +535,7 @@
    "member_id": "3158693075",
    "item_id": "9957923499",
    "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3158693075&item_id=9957923499",
-   "messaged": false
+   "messaged": true
   }
  ]
 }
