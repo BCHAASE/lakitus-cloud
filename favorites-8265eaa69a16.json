@@ -2,13 +2,15 @@
  "schema": 1,
  "shop": "lakitus_cloud",
  "source": "favorites_all.csv",
- "updatedAt": "2026-10-21T13:13:56Z",
+ "updatedAt": "2026-10-21T13:31:36Z",
  "count": 38,
  "messaged_member_ids": [
+  "272814793",
   "3151639862",
   "3158693075",
   "3171859737",
   "3172201652",
+  "3172489628",
   "3176023112",
   "3180799833",
   "3183202400",
@@ -143,7 +145,7 @@
    "member_id": "3172489628",
    "item_id": "10324180016",
    "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3172489628&item_id=10324180016",
-   "messaged": false
+   "messaged": true
   },
   {
    "username": "amandaberti4",
@@ -241,7 +243,7 @@
    "member_id": "272814793",
    "item_id": "10452082410",
    "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=272814793&item_id=10452082410",
-   "messaged": false
+   "messaged": true
   },
   {
    "username": "goose27277",
@@ -395,7 +397,7 @@
    "member_id": "272814793",
    "item_id": "10447866919",
    "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=272814793&item_id=10447866919",
-   "messaged": false
+   "messaged": true
   },
   {
    "username": "keirstyng",
