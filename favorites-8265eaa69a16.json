@@ -2,11 +2,12 @@
  "schema": 1,
  "shop": "lakitus_cloud",
  "source": "favorites_all.csv",
- "updatedAt": "2026-10-21T15:56:40Z",
- "count": 51,
+ "updatedAt": "2026-10-21T16:06:18Z",
+ "count": 52,
  "messaged_member_ids": [
   "272814793",
   "3147429778",
+  "3147471225",
   "3151639862",
   "3158693075",
   "3171859737",
@@ -14,6 +15,8 @@
   "3172489628",
   "3176023112",
   "3180799833",
+  "3182241860",
+  "3182630216",
   "3183202400",
   "3185429777",
   "3189117800",
@@ -23,6 +26,20 @@
   "3201802698"
  ],
  "favorites": [
+  {
+   "username": "ebar_the3rd",
+   "profileLink": "https://www.vinted.com/member/3163125249",
+   "item": "Large Bear #159 Magic The Hobbit",
+   "itemLink": "https://www.vinted.com/items/10287033908-large-bear-159-magic-the-hobbit",
+   "price": "$1.00",
+   "favoritedAt": "Oct 21, ~10:58 AM CT",
+   "favoritedAtIso": "2026-10-21T10:58:00-05:00",
+   "message": "Greetings ! I know trying to search a user's profile for cards is not available on Vinted nor is it easy to create bundles and search for specific cards, if you ever have any specific card(s) you are looking for just send me a message and we will look for you if needed.  Heads up , save money on bundles!",
+   "member_id": "3163125249",
+   "item_id": "10287033908",
+   "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3163125249&item_id=10287033908",
+   "messaged": false
+  },
   {
    "username": "charlenehill",
    "profileLink": "https://www.vinted.com/member/3176530110",
@@ -49,7 +66,7 @@
    "member_id": "3147471225",
    "item_id": "9890330328",
    "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3147471225&item_id=9890330328",
-   "messaged": false
+   "messaged": true
   },
   {
    "username": "vader3113",
@@ -77,7 +94,7 @@
    "member_id": "3182241860",
    "item_id": "10447572045",
    "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3182241860&item_id=10447572045",
-   "messaged": false
+   "messaged": true
   },
   {
    "username": "princexprincess",
@@ -91,7 +108,7 @@
    "member_id": "3182630216",
    "item_id": "10447649235",
    "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3182630216&item_id=10447649235",
-   "messaged": false
+   "messaged": true
   },
   {
    "username": "princexprincess",
@@ -105,7 +122,7 @@
    "member_id": "3182630216",
    "item_id": "10445403902",
    "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3182630216&item_id=10445403902",
-   "messaged": false
+   "messaged": true
   },
   {
    "username": "pikapicks21",
@@ -679,7 +696,7 @@
    "member_id": "3182630216",
    "item_id": "10447643121",
    "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3182630216&item_id=10447643121",
-   "messaged": false
+   "messaged": true
   },
   {
    "username": "princexprincess",
@@ -693,7 +710,7 @@
    "member_id": "3182630216",
    "item_id": "9906351266",
    "message_link": "https://www.vinted.com/inbox/want_it?receiver_id=3182630216&item_id=9906351266",
-   "messaged": false
+   "messaged": true
   },
   {
    "username": "mr_ironcutter94",
