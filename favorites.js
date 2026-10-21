@@ -24,6 +24,10 @@
   '.fr .mv{display:block;box-sizing:border-box;padding:10px 14px;min-height:40px;background:#2dd4bf;border:1px solid #2dd4bf;color:#0f1214;border-radius:6px;font-size:14px;font-weight:600;text-decoration:none;text-align:center;cursor:pointer}'+
   '.fr .mv small{display:block;font-weight:400;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}'+
   '.fr .mv.ok{background:#0f1214;color:#2dd4bf}'+
+  '.fr .andn{font-size:12px;line-height:1.35;color:#fbbf24;background:none;border:0;padding:2px 0 0}'+
+  '.fr .mk{flex:0 0 auto;padding:4px 10px;min-height:30px;background:none;border:1px solid #555;color:#bbb;border-radius:6px;font-size:13px;cursor:pointer}'+
+  '.fr .mk.un{border-color:#2dd4bf;color:#2dd4bf}.fr .msgd{background:#34d399;color:#0f1214;border-radius:4px;padding:1px 6px;font-size:12px;font-weight:600}'+
+  '#fsm{margin:4px 0 16px;padding:10px 14px;min-height:40px;width:100%;background:#1a1f22;border:1px solid #555;color:#bbb;border-radius:6px;font-size:14px;cursor:pointer}'+
   '#ftoast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:9999;background:#2dd4bf;color:#0f1214;padding:12px 18px;border-radius:8px;font-size:15px;font-weight:600;box-shadow:0 4px 16px rgba(0,0,0,.5);max-width:90vw;text-align:center;opacity:0;pointer-events:none;transition:opacity .2s}'+
   '#ftoast.on{opacity:1}#ftoast.bad{background:#f87171}'+
   '@media(max-width:700px){.tabs{max-width:100%}.fg{padding:10px}.fr .msg{flex-direction:column}.fr .cp{width:100%}.fr .msg .acts{flex:0 0 auto;width:100%;max-width:none;box-sizing:border-box}}';
@@ -35,9 +39,28 @@
   tabs.innerHTML='<button type="button" data-v="inv" class="on" role="tab">Inventory</button><button type="button" data-v="fav" role="tab">\u2605 Favorites</button>';
   inv.parentNode.insertBefore(tabs,inv);
   fav.innerHTML='<div class="fbar"><input id="fq" type="search" placeholder="Search favorites by item or username..." autocomplete="off">'+
-    '<label class="tg"><input type="checkbox" id="fp"> Group by person</label></div><div class="fst" id="fst">Loading favorites\u2026</div><div id="fl"></div>';
+    '<label class="tg"><input type="checkbox" id="fp"> Group by person</label></div><div class="fst" id="fst">Loading favorites\u2026</div><div id="fl"></div>'+
+    '<button type="button" id="fsm" hidden></button>';
   var fq=document.getElementById('fq'),fp=document.getElementById('fp'),fst=document.getElementById('fst'),fl=document.getElementById('fl');
-  var data=null,loading=false,updatedAt='';
+  var data=null,loading=false,updatedAt='',feedMsg={},showMsg=false,fsm=document.getElementById('fsm');
+  // Already-messaged buyers are hidden (per member: all of their favorites). Source = feed messaged_member_ids +
+  // each entry's messaged flag, plus marks made in this browser (localStorage), minus un-marks made here.
+  var MS_KEY='lakitu_messaged_v1';
+  function lsGet(){try{var o=JSON.parse(localStorage.getItem(MS_KEY)||'{}');return{marked:o.marked||[],unmarked:o.unmarked||[]}}catch(_){return{marked:[],unmarked:[]}}}
+  function lsSet(o){try{localStorage.setItem(MS_KEY,JSON.stringify(o))}catch(_){}}
+  function memberOf(f){
+    if(/^\d+$/.test(String(f.member_id||'')))return String(f.member_id);
+    return idOf(/\/member\/(?:general\/)?(\d+)/,f.profileLink||f.profile_link)||idOf(/[?&]receiver_id=(\d+)/,f.message_link||f.messageLink);
+  }
+  function messagedSet(){
+    var s={},k,o=lsGet();for(k in feedMsg)s[k]=1;o.marked.forEach(function(m){s[m]=1});o.unmarked.forEach(function(m){delete s[m]});return s;
+  }
+  function setMessaged(mid,on){
+    var o=lsGet();o.marked=o.marked.filter(function(m){return m!==mid});o.unmarked=o.unmarked.filter(function(m){return m!==mid});
+    (on?o.marked:o.unmarked).push(mid);lsSet(o);
+  }
+  var IS_ANDROID=/Android/i.test(navigator.userAgent||'');
+  var ANDROID_NOTE='On Android, if this opens the Vinted app with an error, use the Flyp Mobile app\u2019s Message button, or turn off Settings > Apps > Vinted > Open by default > Open supported links.';
 
   function show(v){
     var f=v==='fav';inv.hidden=f;fav.hidden=!f;
@@ -50,7 +73,9 @@
   function load(){
     if(loading)return;loading=true;fst.textContent='Loading favorites\u2026';
     fetch(FEED+'?t='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
-    .then(function(d){data=(d&&d.favorites)||[];updatedAt=d&&d.updatedAt||'';render()})
+    .then(function(d){data=(d&&d.favorites)||[];updatedAt=d&&d.updatedAt||'';feedMsg={};
+      ((d&&d.messaged_member_ids)||[]).forEach(function(m){if(/^\d+$/.test(String(m)))feedMsg[String(m)]=1});
+      data.forEach(function(f){var m=memberOf(f);if(f.messaged===true&&m)feedMsg[m]=1});render()})
     .catch(function(e){fst.textContent='Could not load favorites ('+e.message+'). Pull to refresh or try again later.'})
     .then(function(){loading=false});
   }
@@ -81,9 +106,9 @@
     var u=msgLink(f);if(!u)return '';
     return '<a class="mv" href="'+esc(u)+'" target="_blank" rel="noopener" data-m="'+mi+'" title="Copies the message, then opens the Vinted chat for this buyer and item">Message on Vinted'+(sub?'<small>'+esc(sub)+'</small>':'')+'</a>';
   }
-  function groupBy(keyFn){
+  function groupBy(keyFn,list){
     var order=[],map={};
-    data.forEach(function(f){var k=keyFn(f);if(!map[k]){map[k]=[];order.push(k)}map[k].push(f)});
+    list.forEach(function(f){var k=keyFn(f);if(!map[k]){map[k]=[];order.push(k)}map[k].push(f)});
     order.forEach(function(k){map[k].sort(function(a,b){return ts(b)-ts(a)})});
     order.sort(function(a,b){return ts(map[b][0])-ts(map[a][0])});
     return order.map(function(k){return map[k]});
@@ -91,39 +116,47 @@
   var msgs=[];
   // @username = same as tapping the Vinted favorite notification: copies the message and opens the want_it chat
   // (fs[0] = this item's favorite, or in Group by person the person's most recent favorite). Small 'profile' link beside it.
-  function row(name,link,time,msg,extra,favsForBtns){
+  function mkBtn(mid,name,done){
+    if(!mid)return '';
+    return (done?'<span class="msgd">\u2713 messaged</span>':'')+'<button type="button" class="mk'+(done?' un':'')+'" data-mid="'+esc(mid)+'" data-u="'+esc(name)+'">'+(done?'Un-mark messaged':'Mark messaged')+'</button>';
+  }
+  function row(name,link,time,msg,extra,favsForBtns,ms){
     msgs.push(msg);var mi=msgs.length-1,fs=favsForBtns||[],multi=fs.length>1,ml=fs.length?msgLink(fs[0]):'';
+    var mid=fs.length?memberOf(fs[0]):'',mvs=fs.map(function(f){return mvBtn(f,mi,multi?f.item:'')}).join('');
     var un=ml?'<a class="un" href="'+esc(ml)+'" target="_blank" rel="noopener" data-m="'+mi+'" title="Copies the message, then opens the Vinted chat for this buyer'+(multi?' (most recent item)':' and item')+'">'+esc(name)+'</a>'
              :'<a href="'+esc(safeUrl(link))+'" target="_blank" rel="noopener">'+esc(name)+'</a>';
     var pf=ml&&safeUrl(link)!=='#'?'<a class="pf" href="'+esc(safeUrl(link))+'" target="_blank" rel="noopener" title="Open Vinted profile">profile</a>':'';
-    return '<div class="fr"><div class="who">'+un+pf+'<span class="tm">'+esc(time)+'</span></div>'+(extra||'')+
+    return '<div class="fr"><div class="who">'+un+pf+'<span class="tm">'+esc(time)+'</span>'+mkBtn(mid,name,!!(ms&&mid&&ms[mid]))+'</div>'+(extra||'')+
       '<div class="msg"><div>'+esc(msg)+'</div><div class="acts"><button type="button" class="cp" data-m="'+mi+'">Copy</button>'+
-      fs.map(function(f){return mvBtn(f,mi,multi?f.item:'')}).join('')+'</div></div></div>';
+      mvs+(mvs&&IS_ANDROID?'<div class="andn">'+esc(ANDROID_NOTE)+'</div>':'')+'</div></div></div>';
   }
   function render(){
     if(!data)return;
     var v=fq.value.toLowerCase().trim(),byP=fp.checked,h='',ng=0,nf=0;msgs=[];
+    var ms=messagedSet(),hb={};data.forEach(function(f){var m=memberOf(f);if(m&&ms[m])hb[m]=1});
+    var nHidden=Object.keys(hb).length,list=showMsg?data:data.filter(function(f){var m=memberOf(f);return !(m&&ms[m])});
+    fsm.hidden=!(nHidden||showMsg);fsm.textContent=(showMsg?'Hide':'Show')+' messaged ('+nHidden+')';
     function hit(s){return !v||String(s||'').toLowerCase().indexOf(v)>=0}
     if(!byP){
-      groupBy(function(f){return f.itemLink||f.item}).forEach(function(g){
+      groupBy(function(f){return f.itemLink||f.item},list).forEach(function(g){
         var it=g[0],itemHit=hit(it.item),rows=g.filter(function(f){return itemHit||hit(f.username)});
         if(!rows.length)return;ng++;nf+=rows.length;
         var users={};g.forEach(function(f){users[f.username]=1});var n=Object.keys(users).length;
         h+='<div class="fg"><div class="fh"><a href="'+esc(safeUrl(it.itemLink))+'" target="_blank" rel="noopener">'+esc(it.item)+'</a><span class="pr">'+esc(it.price)+'</span><span class="ct">\u2605 '+n+' favoriter'+(n===1?'':'s')+'</span></div>'+
-          rows.map(function(f){return row(f.username,f.profileLink,when(f),f.message||FIXED_MSG,'',[f])}).join('')+'</div>';
+          rows.map(function(f){return row(f.username,f.profileLink,when(f),f.message||FIXED_MSG,'',[f],ms)}).join('')+'</div>';
       });
     }else{
-      groupBy(function(f){return f.username}).forEach(function(g){
+      groupBy(function(f){return f.username},list).forEach(function(g){
         var u=g[0].username,ok=hit(u)||g.some(function(f){return hit(f.item)});
         if(!ok)return;ng++;nf+=g.length;
         var items='<ul class="its">'+g.map(function(f){return '<li><a href="'+esc(safeUrl(f.itemLink))+'" target="_blank" rel="noopener">'+esc(f.item)+'</a> \u00b7 '+esc(f.price)+' \u00b7 <span class="tm">'+esc(when(f))+'</span></li>'}).join('')+'</ul>';
         h+='<div class="fg"><div class="fh"><span class="ct">'+g.length+' item'+(g.length===1?'':'s')+' favorited</span></div>'+
-          row(u,g[0].profileLink,'latest '+when(g[0]),personMsg(u,g),items,g)+'</div>';
+          row(u,g[0].profileLink,'latest '+when(g[0]),personMsg(u,g),items,g,ms)+'</div>';
       });
     }
     var up='';if(updatedAt&&CTF){var d=new Date(updatedAt);if(!isNaN(d))up=' \u00b7 Feed updated ~'+CTF.format(d)+' CT'}
-    fst.textContent=(byP?ng+' '+(ng===1?'person':'people'):ng+' item'+(ng===1?'':'s'))+' \u00b7 '+nf+' favorite'+(nf===1?'':'s')+(v?' (filtered)':'')+up;
-    fl.innerHTML=h||'<div class="fst">'+(data.length?'No favorites match your search.':'No favorites yet.')+'</div>';
+    fst.textContent=(byP?ng+' '+(ng===1?'person':'people'):ng+' item'+(ng===1?'':'s'))+' \u00b7 '+nf+' favorite'+(nf===1?'':'s')+(v?' (filtered)':'')+(nHidden?' \u00b7 '+nHidden+' messaged buyer'+(nHidden===1?'':'s')+(showMsg?' shown':' hidden'):'')+up;
+    fl.innerHTML=h||'<div class="fst">'+(data.length?(list.length?'No favorites match your search.':'Every favoriter has been messaged.'):'No favorites yet.')+'</div>';
   }
   function fallbackCopy(t){
     var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.cssText='position:fixed;top:0;left:0;opacity:0;font-size:16px';
@@ -153,6 +186,11 @@
     if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){flash(b,true)},function(){flash(b,fallbackCopy(t))})}
     else flash(b,fallbackCopy(t));
   });
+  fl.addEventListener('click',function(e){
+    var b=e.target.closest('.mk');if(!b)return;var mid=b.getAttribute('data-mid'),u=b.getAttribute('data-u'),on=!b.classList.contains('un');
+    setMessaged(mid,on);toast(on?u+' marked messaged \u2014 hidden':u+' un-marked \u2014 shown again');render();
+  });
+  fsm.addEventListener('click',function(){showMsg=!showMsg;render()});
   fq.addEventListener('input',render);fp.addEventListener('change',render);
   document.addEventListener('visibilitychange',function(){if(!document.hidden&&!fav.hidden)load()});
   show(/^#fav/i.test(location.hash)?'fav':'inv');
